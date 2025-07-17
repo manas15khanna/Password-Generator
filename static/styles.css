@@ -157,6 +157,8 @@ input {
   position: relative;
   display: inline-block;
   padding: 20px 30px;
+  top:70%;
+  bottom:10px;
   border: 2px solid #212121;
   text-transform: uppercase;
   color: #212121;

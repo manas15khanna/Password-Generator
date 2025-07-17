@@ -14,6 +14,7 @@
   </style>
 </head>
 <body>
+<div class="wrapper">
 <div class="card">
   <span class="card__title">Password Generator</span>
   <p class="card__content">
@@ -24,6 +25,12 @@
     <button class="card__button" onclick="generatePassword()">Generate</button>
   </div>
 </div>
+  <div class="credits">
+    <button>
+      <a href="https://github.com/manas15khanna/" target="_blank" class="btn2"><span class="spn2">Contact</span></a>
+    </button>
+  </div>
+</div>
   <script>
     async function generatePassword() {
       const response = await fetch('/generate-password');
@@ -31,11 +38,6 @@
       document.getElementById('password').value = data.password;
     }
   </script>
-  <div class="credits">
-    <button>
-      <a href="https://github.com/manas15khanna/" target="_blank" class="btn2"><span class="spn2">Contact</span></a>
-    </button>
-  </div>
 </body>
 </html>
 
