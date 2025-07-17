@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'FiraCode Nerd Font Mono';
+      src: url('https://cdn.jsdelivr.net/gh/ryanoasis/nerd-fonts@master/patched-fonts/FiraCode/Regular/FiraCodeNerdFont-Regular.ttf') format('truetype');
+    }
+  </style>
+</head>
+<body>
+<div class="card">
+  <span class="card__title">Password Generator</span>
+  <p class="card__content">
+    Click Below to Generate a secure Password
+  </p>
+  <div class="card__form">
+    <input type="text" id="password" placeholder="password" readonly />
+    <button class="card__button" onclick="generatePassword()">Generate</button>
+  </div>
+</div>
+  <script>
+    async function generatePassword() {
+      const response = await fetch('/generate-password');
+      const data = await response.json();
+      document.getElementById('password').value = data.password;
+    }
+  </script>
+  <div class="credits">
+    <button>
+      <a href="https://github.com/manas15khanna/" target="_blank" class="btn2"><span class="spn2">Contact</span></a>
+    </button>
+  </div>
+</body>
+</html>
+
