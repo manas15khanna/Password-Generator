@@ -25,7 +25,6 @@ A modern, minimal password generator web app built with **Python Flask**, **HTML
 
 - **Backend:** Python 3, Flask  
 - **Frontend:** HTML5, CSS3, JavaScript (vanilla, inline)  
-- **Fonts:** [Kanit](https://fonts.google.com/specimen/Kanit) for UI, [FiraCode Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts) for password display  
 - **Security:** Python’s `secrets` module for cryptographically secure passwords
 
 ---
